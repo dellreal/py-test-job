@@ -1,0 +1,12 @@
+# DIRECTORIES
+.venv
+.venv_linux
+.idea
+.vscode
+.pytest_cache/
+
+# FILES
+tempCodeRunnerFile.python
+tempCodeRunnerFile.py
+*.pyc
+*.exe
