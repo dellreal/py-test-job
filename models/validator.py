@@ -23,13 +23,13 @@ class OrderValidate(BaseModel):
         return client_org
 
     @validator("num")
-    def org_should_be_not_empty(cls, num: str):
+    def num_should_be_positive(cls, num: str):
         if num < 0:
             raise ValueError("num is uncorrect")
         return num
 
     @validator("total")
-    def org_should_be_not_empty(cls, total: str):
+    def total_should_be_positive(cls, total: str):
         if total < 0:
             raise ValueError("total is uncorrect")
         return total
