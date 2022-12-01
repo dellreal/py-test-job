@@ -22,6 +22,18 @@ class OrderValidate(BaseModel):
             raise ValueError("client_org is empty")
         return client_org
 
+    @validator("num")
+    def org_should_be_not_empty(cls, num: str):
+        if num < 0:
+            raise ValueError("num is uncorrect")
+        return num
+
+    @validator("total")
+    def org_should_be_not_empty(cls, total: str):
+        if total < 0:
+            raise ValueError("total is uncorrect")
+        return total
+
     @validator("date")
     def service_should_be_date_format(cls, date: str):
         return datetime.strptime(date, "%d.%m.%Y").date()
